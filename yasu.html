@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Yasu di balay balay</title>
+   <style>
+       :root {
+           --bg-color: #fff;
+           --text-color: #333;
+           --accent-color: #666;
+       }
+       
+       @media (prefers-color-scheme: dark) {
+           :root {
+               --bg-color: #1a1a1a;
+               --text-color: #e5e5e5;
+               --accent-color: #a0a0a0;
+           }
+       }
+       
+       [data-theme="dark"] {
+           --bg-color: #1a1a1a;
+           --text-color: #e5e5e5;
+           --accent-color: #a0a0a0;
+       }
+       
+       [data-theme="light"] {
+           --bg-color: #fff;
+           --text-color: #333;
+           --accent-color: #666;
+       }
+       
+       * { transition: background-color 0.3s ease, color 0.3s ease; }
+       
+       body {
+           font-family: -apple-system, system-ui, sans-serif;
+           line-height: 1.6;
+           max-width: 650px;
+           margin: 40px auto;
+           padding: 0 10px;
+           color: var(--text-color);
+           background: var(--bg-color);
+       }
+       
+       a { color: var(--text-color); }
+       
+       img {
+           max-width: 100%;
+           height: auto;
+           display: block;
+           margin: 20px auto;
+           border-radius: 8px;
+           loading: lazy;
+       }
+       
+       .theme-toggle {
+           position: fixed;
+           top: 20px;
+           right: 20px;
+           background: var(--bg-color);
+           border: 1px solid var(--accent-color);
+           color: var(--text-color);
+           padding: 8px 12px;
+           border-radius: 6px;
+           cursor: pointer;
+           font-size: 14px;
+       }
+       
+       .theme-toggle:hover {
+           opacity: 0.8;
+       }
+       
+       pre {
+           background: var(--accent-color);
+           color: var(--bg-color);
+           padding: 16px;
+           border-radius: 6px;
+           overflow-x: auto;
+       }
+       
+       code {
+           background: var(--accent-color);
+           color: var(--bg-color);
+           padding: 2px 6px;
+           border-radius: 3px;
+           font-size: 0.9em;
+       }
+       
+       blockquote {
+           border-left: 3px solid var(--accent-color);
+           margin: 0;
+           padding-left: 20px;
+           font-style: italic;
+           color: var(--accent-color);
+       }
+   </style>
+</head>
+<body>
+   <button class="theme-toggle" onclick="toggleTheme()">◑</button>
+   <a href="./">← Back</a>
+   <h1>Yasu di balay balay</h1>
+   <p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/0a1c921a-1c41-431a-a716-ffd1e828752a/0dbef964-7536-433f-9ce0-70d599bef1e2/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466R7RMYJQB%2F20250729%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250729T181321Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEIL%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIQCD0FbYfoztjmY7JpHPlbrvgwpWrS45MeYjd5nawGbqTgIgB7Py0Vbekjut2pRCsQQv25BTkR4hWKU%2B3y87sjdewAcqiAQIq%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDIW78SstxbXY0sQzCircAy0i6EwTRDxpL7255UXV1ZFuz51UZ4jfl%2F%2FEXWOqJXZF%2FEbCTCEg0zshFF9NDMnNTDhK5Z3tgWAM%2FxKLJLWSEj7aWARVVwA43iiU8qR4Q14rCfHQGW5kYKI97GEKyxv8mOMN1vgl1%2FzuNwAs1qR4zTto3I1m6HJeC5t5A%2B1sIZd%2FDv7T4YOS2ISzoXxR36vpBqjkLuphcxUfB5FdYnup%2BphO6%2FC5rJ2bIobUTW9eGLip2%2FKj709DOUdTXpsvTwL3XJWIeCh6DccXN2NDY1vi811cTMKy07tFK%2BgxuhgapWJ7fpBJm4%2BJHfHXjX2AhFq7i7%2BKP3KgLNtTp2fkiR2PM7%2FAMTrEDzkJO3WtyOy3EXRVfHxYXw602fHsYXofSeQwQqyICOQB6w4vl75K3tnHwut8rJYnajN24OJtI7epzeAO94g%2FKHR1hoAQniG50kZcHu4JEHRZB4LaY81yD%2BRg%2BAsIPnYiQwwwSCId%2BXkAdFJ%2FYVK4rmrIGtRQcxD%2FBAJmlZz8yGO606PaHuTo4xf8c3ltMWGn0gysVr%2F9enIbJCOA6EUlsyQTT9KYSuP0T3ft7ed3EqWCH99bnv5uYy2mqU5XPeWLF5CBfDvJlA5PZcGzBfAItNxYmcLC4SBmMNCOpMQGOqUBbjQ4BbTMPMh4VqhfeQZ2LgBB5W%2FQKWzq5iuvIP3ETTuT9Sl9rIx367aBw0frevPZ92G88V4UvT0cDaD3Oe%2F6AN%2BVS3HYYoqkBTV7wG8TbgYz4%2B6OYV3cYf8Zbc1yO%2Bfcl7Ex5e16lWRFl2McRmHhYqeFc3NZ3oVQg%2FwNMyOZ%2Fal4LSfo9N7Pyk3PD6UB%2BUtN6IywjelMJ8FbshpDQqR2AIejjmuB&X-Amz-Signature=c8623573af543d73e89e7384b05d61c5758e14df912f1bf749932e9db9b02b5a&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject" alt="image.png"></p>
+
+   <div style="margin-top: 40px; color: var(--accent-color);">
+       Last updated: 7/29/2025
+   </div>
+   
+   <script>
+       function toggleTheme() {
+           const current = document.documentElement.getAttribute('data-theme');
+           const next = current === 'dark' ? 'light' : 'dark';
+           document.documentElement.setAttribute('data-theme', next);
+           localStorage.setItem('theme', next);
+       }
+       
+       // Initialize theme
+       const saved = localStorage.getItem('theme');
+       if (saved) {
+           document.documentElement.setAttribute('data-theme', saved);
+       } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+           document.documentElement.setAttribute('data-theme', 'dark');
+       }
+       
+       // Listen for system theme changes
+       window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+           if (!localStorage.getItem('theme')) {
+               document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+           }
+       });
+   </script>
+</body>
+</html>
